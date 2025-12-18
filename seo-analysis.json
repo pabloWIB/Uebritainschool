@@ -1,0 +1,390 @@
+{
+  "timestamp": "2025-12-18T01:04:40.361Z",
+  "files": {
+    "html": [
+      {
+        "path": "404.html",
+        "size": 0,
+        "sizeKB": 0
+      },
+      {
+        "path": "admisiones.html",
+        "size": 0,
+        "sizeKB": 0
+      },
+      {
+        "path": "contacto.html",
+        "size": 0,
+        "sizeKB": 0
+      },
+      {
+        "path": "inicio.html",
+        "size": 30926,
+        "sizeKB": 30.2
+      },
+      {
+        "path": "modalidad.html",
+        "size": 0,
+        "sizeKB": 0
+      },
+      {
+        "path": "nosotros.html",
+        "size": 0,
+        "sizeKB": 0
+      }
+    ],
+    "images": [
+      {
+        "path": "assets/britain-school-pcei-logo.png",
+        "size": 570859,
+        "sizeKB": 557.48
+      },
+      {
+        "path": "assets/charla-directivo-izada-de-bandera-britain-school.webp",
+        "size": 1081058,
+        "sizeKB": 1055.72
+      },
+      {
+        "path": "assets/charla-educativa-britain-school-patio.webp",
+        "size": 922342,
+        "sizeKB": 900.72
+      },
+      {
+        "path": "assets/conferencia-educativa-britain-school-teatro.webp",
+        "size": 676184,
+        "sizeKB": 660.34
+      },
+      {
+        "path": "assets/conviertete-en-bachiller-britain-school-promocion.webp",
+        "size": 218492,
+        "sizeKB": 213.37
+      },
+      {
+        "path": "assets/directivo-britain-school-dando-charla-institucional.webp",
+        "size": 417012,
+        "sizeKB": 407.24
+      },
+      {
+        "path": "assets/directivos-britain-school-evento-teatro.webp",
+        "size": 782246,
+        "sizeKB": 763.91
+      },
+      {
+        "path": "assets/directivos-y-estudiantes-graduacion-britain-school.webp",
+        "size": 553790,
+        "sizeKB": 540.81
+      },
+      {
+        "path": "assets/estudiante-levantando-bandera-izada-britain-school.webp",
+        "size": 1458956,
+        "sizeKB": 1424.76
+      },
+      {
+        "path": "assets/estudiantes-britain-school-grado-teatro-mano-en-el-pecho.webp",
+        "size": 663080,
+        "sizeKB": 647.54
+      },
+      {
+        "path": "assets/estudiantes-britain-school-grado-teatro-mano-levantada..webp",
+        "size": 775928,
+        "sizeKB": 757.74
+      },
+      {
+        "path": "assets/flag-raising-ceremony-britain-school-uk-background.png",
+        "size": 563776,
+        "sizeKB": 550.56
+      },
+      {
+        "path": "assets/informacion-publicitaria-britain-school-descuento-50.webp",
+        "size": 517866,
+        "sizeKB": 505.73
+      },
+      {
+        "path": "assets/informacion-publicitaria-britain-school-educacion.webp",
+        "size": 671156,
+        "sizeKB": 655.43
+      },
+      {
+        "path": "assets/instalaciones-britain-school-fachada-noche.webp",
+        "size": 1214364,
+        "sizeKB": 1185.9
+      },
+      {
+        "path": "assets/izada-de-bandera-britain-school-acto-civico.webp",
+        "size": 923786,
+        "sizeKB": 902.13
+      },
+      {
+        "path": "assets/izada-de-bandera-britain-school-patio.webp",
+        "size": 1501398,
+        "sizeKB": 1466.21
+      },
+      {
+        "path": "assets/izada-de-bandera-britain-school-premiacion.webp",
+        "size": 530698,
+        "sizeKB": 518.26
+      },
+      {
+        "path": "assets/izada-de-bandera-britain-school-teatro.webp",
+        "size": 679912,
+        "sizeKB": 663.98
+      },
+      {
+        "path": "assets/juramento-a-la-bandera-britain-school-estudiantes.webp",
+        "size": 806714,
+        "sizeKB": 787.81
+      },
+      {
+        "path": "assets/juramento-a-la-bandera-directivos-britain-school.webp",
+        "size": 765260,
+        "sizeKB": 747.32
+      },
+      {
+        "path": "assets/logo-britain-school-pcei-ecuador.webp",
+        "size": 73284,
+        "sizeKB": 71.57
+      },
+      {
+        "path": "assets/not-graduated-yet-finish-high-school-britain-school.jpeg",
+        "size": 159945,
+        "sizeKB": 156.2
+      },
+      {
+        "path": "assets/premiacion-estudiante-izada-de-bandera-britain-school.webp",
+        "size": 870150,
+        "sizeKB": 849.76
+      },
+      {
+        "path": "assets/student-holding-flag-board-britain-school-uk-background.png",
+        "size": 511736,
+        "sizeKB": 499.74
+      },
+      {
+        "path": "assets/students-graduation-hats-throwing-britain-school-uk-flag.png",
+        "size": 579849,
+        "sizeKB": 566.26
+      },
+      {
+        "path": "assets/study-online-distance-education-britain-school-slider.jpg",
+        "size": 607847,
+        "sizeKB": 593.6
+      },
+      {
+        "path": "assets/study-while-working-distance-education-britain-school.jpeg",
+        "size": 167837,
+        "sizeKB": 163.9
+      }
+    ],
+    "css": [
+      {
+        "path": "assets/css/styles.css",
+        "size": 0,
+        "sizeKB": 0
+      },
+      {
+        "path": "assets/css/whatsapp/styles.css",
+        "size": 24246,
+        "sizeKB": 23.68
+      }
+    ],
+    "js": [
+      {
+        "path": "analyze-project.js",
+        "size": 7177,
+        "sizeKB": 7.01
+      },
+      {
+        "path": "assets/js/script.js",
+        "size": 0,
+        "sizeKB": 0
+      },
+      {
+        "path": "assets/js/whatsapp/index.js",
+        "size": 20881,
+        "sizeKB": 20.39
+      },
+      {
+        "path": "assets/list-images.js",
+        "size": 1160,
+        "sizeKB": 1.13
+      }
+    ]
+  },
+  "seo": {
+    "missingMetaTags": [
+      {
+        "file": "404.html",
+        "missing": "meta description"
+      },
+      {
+        "file": "404.html",
+        "missing": "meta viewport"
+      },
+      {
+        "file": "admisiones.html",
+        "missing": "meta description"
+      },
+      {
+        "file": "admisiones.html",
+        "missing": "meta viewport"
+      },
+      {
+        "file": "contacto.html",
+        "missing": "meta description"
+      },
+      {
+        "file": "contacto.html",
+        "missing": "meta viewport"
+      },
+      {
+        "file": "inicio.html",
+        "missing": "meta description"
+      },
+      {
+        "file": "modalidad.html",
+        "missing": "meta description"
+      },
+      {
+        "file": "modalidad.html",
+        "missing": "meta viewport"
+      },
+      {
+        "file": "nosotros.html",
+        "missing": "meta description"
+      },
+      {
+        "file": "nosotros.html",
+        "missing": "meta viewport"
+      }
+    ],
+    "missingAltText": [],
+    "brokenLinks": [],
+    "emptyTitles": [
+      "404.html",
+      "admisiones.html",
+      "contacto.html",
+      "modalidad.html",
+      "nosotros.html"
+    ],
+    "duplicateTitles": [],
+    "largeSizedImages": [
+      {
+        "path": "assets/britain-school-pcei-logo.png",
+        "sizeKB": 557.48
+      },
+      {
+        "path": "assets/charla-directivo-izada-de-bandera-britain-school.webp",
+        "sizeKB": 1055.72
+      },
+      {
+        "path": "assets/charla-educativa-britain-school-patio.webp",
+        "sizeKB": 900.72
+      },
+      {
+        "path": "assets/conferencia-educativa-britain-school-teatro.webp",
+        "sizeKB": 660.34
+      },
+      {
+        "path": "assets/directivos-britain-school-evento-teatro.webp",
+        "sizeKB": 763.91
+      },
+      {
+        "path": "assets/directivos-y-estudiantes-graduacion-britain-school.webp",
+        "sizeKB": 540.81
+      },
+      {
+        "path": "assets/estudiante-levantando-bandera-izada-britain-school.webp",
+        "sizeKB": 1424.76
+      },
+      {
+        "path": "assets/estudiantes-britain-school-grado-teatro-mano-en-el-pecho.webp",
+        "sizeKB": 647.54
+      },
+      {
+        "path": "assets/estudiantes-britain-school-grado-teatro-mano-levantada..webp",
+        "sizeKB": 757.74
+      },
+      {
+        "path": "assets/flag-raising-ceremony-britain-school-uk-background.png",
+        "sizeKB": 550.56
+      },
+      {
+        "path": "assets/informacion-publicitaria-britain-school-descuento-50.webp",
+        "sizeKB": 505.73
+      },
+      {
+        "path": "assets/informacion-publicitaria-britain-school-educacion.webp",
+        "sizeKB": 655.43
+      },
+      {
+        "path": "assets/instalaciones-britain-school-fachada-noche.webp",
+        "sizeKB": 1185.9
+      },
+      {
+        "path": "assets/izada-de-bandera-britain-school-acto-civico.webp",
+        "sizeKB": 902.13
+      },
+      {
+        "path": "assets/izada-de-bandera-britain-school-patio.webp",
+        "sizeKB": 1466.21
+      },
+      {
+        "path": "assets/izada-de-bandera-britain-school-premiacion.webp",
+        "sizeKB": 518.26
+      },
+      {
+        "path": "assets/izada-de-bandera-britain-school-teatro.webp",
+        "sizeKB": 663.98
+      },
+      {
+        "path": "assets/juramento-a-la-bandera-britain-school-estudiantes.webp",
+        "sizeKB": 787.81
+      },
+      {
+        "path": "assets/juramento-a-la-bandera-directivos-britain-school.webp",
+        "sizeKB": 747.32
+      },
+      {
+        "path": "assets/premiacion-estudiante-izada-de-bandera-britain-school.webp",
+        "sizeKB": 849.76
+      },
+      {
+        "path": "assets/student-holding-flag-board-britain-school-uk-background.png",
+        "sizeKB": 499.74
+      },
+      {
+        "path": "assets/students-graduation-hats-throwing-britain-school-uk-flag.png",
+        "sizeKB": 566.26
+      },
+      {
+        "path": "assets/study-online-distance-education-britain-school-slider.jpg",
+        "sizeKB": 593.6
+      }
+    ]
+  },
+  "structure": {
+    "totalFiles": 44,
+    "totalSize": 19352101,
+    "totalSizeMB": 18.46,
+    "depth": 3
+  },
+  "recommendations": {
+    "htaccess": {
+      "exists": true,
+      "status": "Encontrado"
+    },
+    "robotsTxt": {
+      "exists": true,
+      "status": "Encontrado"
+    },
+    "sitemap": {
+      "exists": true,
+      "status": "Encontrado",
+      "pagesFound": 6
+    },
+    "error404": {
+      "exists": true,
+      "status": "Encontrada"
+    }
+  }
+}
