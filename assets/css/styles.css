@@ -510,7 +510,7 @@ h5 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1248px) {
   .nav-menu {
     position: fixed;
     top: 90px;

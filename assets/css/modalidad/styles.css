@@ -1,0 +1,563 @@
+.hero-modality {
+  position: relative;
+  height: 450px;
+  background-image: url("../../study-while-working-distance-education-britain-school.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(47, 43, 99, 0.85);
+}
+
+.hero-modality-content {
+  position: relative;
+  z-index: 10;
+  color: var(--text-inverse);
+  text-align: center;
+}
+
+.breadcrumb {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.hero-modality-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-modality-content p {
+  font-size: 1.2rem;
+  color: var(--color-light);
+}
+
+.modality-intro {
+  padding: 80px 0 60px;
+  background: var(--color-white);
+}
+
+.intro-content-center {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  display: inline-block;
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.intro-content-center h2 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.intro-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.modalities-main {
+  padding: 60px 0 100px;
+  background: var(--color-light);
+}
+
+.modalities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.modality-card {
+  background: var(--color-white);
+  padding: 3rem 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-base);
+  position: relative;
+}
+
+.modality-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.modality-card.featured {
+  border: 3px solid var(--color-accent);
+}
+
+.modality-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.modality-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--color-primary);
+  color: var(--text-inverse);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.modality-card h3 {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.modality-description {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.modality-features {
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.feature-item svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.modality-ideal {
+  background: var(--color-light);
+  padding: 1.25rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.modality-ideal strong {
+  color: var(--color-primary);
+}
+
+.btn-modality {
+  display: block;
+  background: var(--color-secondary);
+  color: var(--text-inverse);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: var(--transition-base);
+}
+
+.btn-modality:hover {
+  background: #a01319;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(196, 22, 28, 0.3);
+}
+
+.comparison-section {
+  padding: 100px 0;
+  background: var(--color-white);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-table thead {
+  background: var(--color-primary);
+  color: var(--text-inverse);
+}
+
+.comparison-table th {
+  padding: 1.5rem 1.25rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.comparison-table td {
+  padding: 1.25rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.comparison-table td:first-child {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+  background: var(--color-light);
+}
+
+.check-yes {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.check-no {
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.check-optional {
+  color: var(--color-info);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.advantages-section {
+  padding: 100px 0;
+  background: var(--color-light);
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.advantage-content h2 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.advantage-intro {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.advantages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.advantage-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.advantage-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--color-primary);
+  color: var(--text-inverse);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.advantage-item h4 {
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.advantage-item p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.advantage-image {
+  position: relative;
+}
+
+.advantage-image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.promo-card {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.promo-card h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.promo-card p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.btn-promo {
+  display: inline-block;
+  background: var(--color-secondary);
+  color: var(--text-inverse);
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-base);
+}
+
+.btn-promo:hover {
+  background: #a01319;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(196, 22, 28, 0.3);
+}
+
+.testimonials-section {
+  padding: 100px 0;
+  background: var(--color-white);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  background: var(--color-light);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.quote-icon {
+  font-size: 4rem;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: 1rem;
+  opacity: 0.3;
+}
+
+.testimonial-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-author strong {
+  display: block;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-author span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.cta-modality {
+  padding: 80px 0;
+  background: var(--color-primary);
+  text-align: center;
+}
+
+.cta-modality h2 {
+  font-size: 2.5rem;
+  color: var(--text-inverse);
+  margin-bottom: 1rem;
+}
+
+.cta-modality p {
+  font-size: 1.2rem;
+  color: var(--color-light);
+  margin-bottom: 2.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary-large {
+  background: var(--color-secondary);
+  color: var(--text-inverse);
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: var(--transition-base);
+}
+
+.btn-primary-large:hover {
+  background: #a01319;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(196, 22, 28, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-inverse);
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: 2px solid var(--text-inverse);
+  transition: var(--transition-base);
+}
+
+.btn-outline:hover {
+  background: var(--text-inverse);
+  color: var(--color-primary);
+}
+
+@media (max-width: 1024px) {
+  .modalities-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-modality-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-modality {
+    height: 350px;
+  }
+
+  .hero-modality-content h1 {
+    font-size: 2rem;
+  }
+
+  .modality-intro,
+  .modalities-main,
+  .comparison-section,
+  .advantages-section,
+  .testimonials-section {
+    padding: 60px 0;
+  }
+
+  .comparison-table {
+    font-size: 0.85rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.75rem;
+  }
+
+  .advantage-image img {
+    height: 400px;
+  }
+
+  .promo-card {
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary-large,
+  .btn-outline {
+    width: 100%;
+    max-width: 300px;
+  }
+}

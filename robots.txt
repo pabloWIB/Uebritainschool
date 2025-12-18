@@ -1,18 +1,12 @@
-# robots.txt para Britain School PCEI
-# https://uebritainschool.edu.ec/robots.txt
-
-# Permitir a todos los bots
 User-agent: *
 Allow: /
 
-# Bloquear archivos y directorios sensibles
 Disallow: /assets/js/
 Disallow: /assets/css/
 Disallow: /*.json$
 Disallow: /*.js$
 Disallow: /analyze-project.js
 
-# Permitir acceso a imágenes para Google Images
 User-agent: Googlebot-Image
 Allow: /assets/*.jpg
 Allow: /assets/*.jpeg
@@ -21,16 +15,13 @@ Allow: /assets/*.webp
 Allow: /assets/*.svg
 Allow: /assets/*.gif
 
-# Permitir acceso a CSS y JS para Google PageSpeed
 User-agent: Googlebot
 Allow: /assets/css/
 Allow: /assets/js/
 
-# Configuración especial para Bing
 User-agent: Bingbot
 Crawl-delay: 1
 
-# Bloquear bots maliciosos comunes
 User-agent: AhrefsBot
 Disallow: /
 
@@ -43,5 +34,4 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
-# Sitemap
 Sitemap: https://uebritainschool.edu.ec/sitemap.xml
