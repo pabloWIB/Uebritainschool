@@ -224,14 +224,24 @@
         </div>
     </section>
 
+    <section class="hero-contact">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-contact-content">
+                <span class="breadcrumb">Inicio → Contacto</span>
+                <h1>Contáctanos</h1>
+                <p>Estamos aquí para responder tus preguntas y ayudarte a iniciar tu camino educativo</p>
+            </div>
+        </div>
+    </section>
+
     <section class="contact-section">
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
                     <h2>Información de Contacto</h2>
                     <p class="contact-intro">¿Tienes preguntas? Estamos disponibles para ayudarte. Contáctanos a través
-                        de
-                        cualquiera de estos medios.</p>
+                        de cualquiera de estos medios.</p>
 
                     <div class="contact-cards">
                         <div class="contact-card">
@@ -305,37 +315,38 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="nombre">Nombre Completo *</label>
-                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                                <input type="text" id="nombre" name="user_name" required
+                                    placeholder="Tu nombre completo">
                             </div>
 
                             <div class="form-group">
                                 <label for="email">Correo Electrónico *</label>
-                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                                <input type="email" id="email" name="user_email" required placeholder="tu@email.com">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="telefono">Teléfono *</label>
-                                <input type="tel" id="telefono" name="telefono" required placeholder="+593 XXX-XXXX">
+                                <input type="tel" id="telefono" name="user_phone" required placeholder="+593 XXX-XXXX">
                             </div>
 
                             <div class="form-group">
                                 <label for="asunto">Asunto *</label>
-                                <select id="asunto" name="asunto" required>
+                                <select id="asunto" name="subject" required>
                                     <option value="">Selecciona un asunto</option>
-                                    <option value="admisiones">Información de Admisiones</option>
-                                    <option value="modalidad">Modalidad de Estudio</option>
-                                    <option value="costos">Costos y Matrículas</option>
-                                    <option value="programas">Programas Académicos</option>
-                                    <option value="otro">Otro</option>
+                                    <option value="Información de Admisiones">Información de Admisiones</option>
+                                    <option value="Modalidad de Estudio">Modalidad de Estudio</option>
+                                    <option value="Costos y Matrículas">Costos y Matrículas</option>
+                                    <option value="Programas Académicos">Programas Académicos</option>
+                                    <option value="Otro">Otro</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="mensaje">Mensaje *</label>
-                            <textarea id="mensaje" name="mensaje" rows="6" required
+                            <textarea id="mensaje" name="message" rows="6" required
                                 placeholder="Escribe tu mensaje aquí..."></textarea>
                         </div>
 
@@ -347,7 +358,8 @@
                         </div>
 
                         <button type="submit" class="btn-submit">
-                            Enviar Mensaje
+                            <span class="btn-text">Enviar Mensaje</span>
+                            <span class="btn-loading" style="display: none;">Enviando...</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -359,6 +371,92 @@
             </div>
         </div>
     </section>
+
+    <section class="cta-boxes">
+        <div class="container">
+            <div class="cta-boxes-grid">
+                <div class="cta-box">
+                    <div class="cta-box-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Llámanos Ahora</h3>
+                    <p>Atención inmediata de lunes a viernes</p>
+                    <a href="tel:+59332812345" class="cta-link">(+593) 3 281-2345</a>
+                </div>
+
+                <div class="cta-box">
+                    <div class="cta-box-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Chatea con nosotros directamente</p>
+                    <a href="https://wa.me/593987654321" class="cta-link" target="_blank">Enviar Mensaje</a>
+                </div>
+
+                <div class="cta-box">
+                    <div class="cta-box-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>Visítanos</h3>
+                    <p>Ven a conocer nuestras instalaciones</p>
+                    <a href="#" class="cta-link">Ver Ubicación</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="thankYouModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+
+            <div class="modal-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9 12l2 2 4-4"></path>
+                </svg>
+            </div>
+
+            <h2 class="modal-title">¡Mensaje Enviado con Éxito!</h2>
+
+            <p class="modal-text">
+                Gracias por contactar a Britain School. Hemos recibido tu mensaje y nuestro equipo se pondrá en contacto
+                contigo en las próximas 24-48 horas.
+            </p>
+
+            <div class="modal-info">
+                <div class="modal-info-item">
+                    <strong>Tiempo de respuesta</strong>
+                    <span>24-48 horas hábiles</span>
+                </div>
+                <div class="modal-info-item">
+                    <strong>Horario de atención</strong>
+                    <span>Lunes a Viernes: 8:00 AM - 5:00 PM</span>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-modal-primary" onclick="closeThankYouModal()">Entendido</button>
+                <a href="tel:+59332812345" class="btn-modal-secondary">
+                    Llamar Ahora
+                </a>
+            </div>
+        </div>
+    </div>
 
     <section class="cta-boxes">
         <div class="container">
@@ -510,6 +608,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="https://uebritainschool.vercel.app/assets/js/whatsapp/index.js"></script>
     <script src="assets/js/contacto/index.js"></script>
