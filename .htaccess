@@ -1,4 +1,4 @@
-RewriteEngine On
+<!-- RewriteEngine On
 
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
@@ -116,4 +116,4 @@ RewriteRule ^ %1 [R=301,L]
   AddType font/woff2 .woff2
   AddType application/json .json
   AddType application/manifest+json .webmanifest
-</IfModule>
+</IfModule> -->
