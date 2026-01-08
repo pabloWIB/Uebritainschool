@@ -1,16 +1,15 @@
+// Configuración de EmailJS
 const CONFIG = {
     EMAILJS: {
-        SERVICE_ID: '',
-        TEMPLATE_ID: '',
-        PUBLIC_KEY: ''
-    },
-    APPS_SCRIPT_URL: ''
+        SERVICE_ID: 'service_t8hswkc',
+        TEMPLATE_ID: 'template_ni1lndt',
+        PUBLIC_KEY: 'Hv_khiO1DJANJtHXj'
+    }
 };
 
+// Inicializar EmailJS
 (function () {
-    if (CONFIG.EMAILJS.PUBLIC_KEY) {
-        emailjs.init(CONFIG.EMAILJS.PUBLIC_KEY);
-    }
+    emailjs.init(CONFIG.EMAILJS.PUBLIC_KEY);
 })();
 
 function openThankYouModal() {
@@ -29,32 +28,19 @@ function closeThankYouModal() {
     }
 }
 
-async function sendToGoogleSheets(formData) {
-    if (!CONFIG.APPS_SCRIPT_URL) {
-        return;
-    }
-
-    try {
-        const response = await fetch(CONFIG.APPS_SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        });
-
-    } catch (error) {
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contactForm');
 
-    if (!contactForm) return;
+    if (!contactForm) {
+        console.error('No se encontró el formulario');
+        return;
+    }
 
     const submitButton = contactForm.querySelector('button[type="submit"]');
-    if (!submitButton) return;
+    if (!submitButton) {
+        console.error('No se encontró el botón de submit');
+        return;
+    }
 
     const btnText = submitButton.querySelector('.btn-text');
     const btnLoading = submitButton.querySelector('.btn-loading');
@@ -63,39 +49,37 @@ document.addEventListener('DOMContentLoaded', function () {
     contactForm.addEventListener('submit', async function (event) {
         event.preventDefault();
 
+        // Deshabilitar botón y mostrar loading
         submitButton.disabled = true;
         if (btnText) btnText.style.display = 'none';
         if (btnLoading) btnLoading.style.display = 'inline';
 
+        console.log('Enviando formulario...', {
+            serviceId: CONFIG.EMAILJS.SERVICE_ID,
+            templateId: CONFIG.EMAILJS.TEMPLATE_ID
+        });
+
         try {
-            const formData = {
-                user_name: contactForm.querySelector('[name="user_name"]').value,
-                user_email: contactForm.querySelector('[name="user_email"]').value,
-                user_phone: contactForm.querySelector('[name="user_phone"]').value,
-                subject: contactForm.querySelector('[name="subject"]').value,
-                message: contactForm.querySelector('[name="message"]').value,
-                timestamp: new Date().toISOString()
-            };
+            const response = await emailjs.sendForm(
+                CONFIG.EMAILJS.SERVICE_ID,
+                CONFIG.EMAILJS.TEMPLATE_ID,
+                contactForm
+            );
 
-            if (CONFIG.EMAILJS.SERVICE_ID && CONFIG.EMAILJS.TEMPLATE_ID) {
-                await emailjs.sendForm(
-                    CONFIG.EMAILJS.SERVICE_ID,
-                    CONFIG.EMAILJS.TEMPLATE_ID,
-                    contactForm
-                );
-            }
-
-            await sendToGoogleSheets(formData);
+            console.log('✅ Mensaje enviado exitosamente:', response);
 
             submitButton.disabled = false;
             if (btnText) btnText.style.display = 'inline';
             if (btnLoading) btnLoading.style.display = 'none';
+
             contactForm.reset();
 
             openThankYouModal();
 
         } catch (error) {
-            alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
+            console.error('❌ Error al enviar mensaje:', error);
+
+            alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.\n\nError: ' + (error.text || error.message || 'Desconocido'));
 
             submitButton.disabled = false;
             if (btnText) btnText.style.display = 'inline';
