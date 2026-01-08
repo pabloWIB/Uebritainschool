@@ -21,7 +21,7 @@
     <link rel="icon" href="assets/britain-school-pcei-logo.png" type="image/png">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://uebritainschool.edu.ec/contacto">
+    <meta property="og:url" content="https://uebritainschool.edu.ec/contacto.html">
     <meta property="og:title" content="Contacto Britain School PCEI Ecuador | Información y Atención">
     <meta property="og:description"
         content="¿Tienes dudas sobre nuestro bachillerato? Contáctanos por teléfono, WhatsApp o visítanos en Latacunga. ¡Estamos para ayudarte!">
@@ -32,22 +32,22 @@
     <meta property="og:site_name" content="Britain School PCEI Ecuador">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://uebritainschool.edu.ec/contacto">
+    <meta name="twitter:url" content="https://uebritainschool.edu.ec/contacto.html">
     <meta name="twitter:title" content="Contacto Britain School PCEI Ecuador">
     <meta name="twitter:description"
         content="Comunícate con Britain School PCEI. Información sobre admisiones y modalidades educativas.">
     <meta name="twitter:image" content="https://uebritainschool.edu.ec/assets/contacto-britain-school-pcei.webp">
 
-    <link rel="canonical" href="https://uebritainschool.edu.ec/contacto">
+    <link rel="canonical" href="https://uebritainschool.edu.ec/contacto.html">
 
     <link rel="icon" type="image/png" sizes="32x32" href="assets/logo-britain-school-pcei-ecuador.webp">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/logo-britain-school-pcei-ecuador.webp">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/logo-britain-school-pcei-ecuador.webp">
     <link rel="manifest" href="assets/site.webmanifest">
 
-    <link rel="alternate" hreflang="es-ec" href="https://uebritainschool.edu.ec/contacto">
-    <link rel="alternate" hreflang="es" href="https://uebritainschool.edu.ec/contacto">
-    <link rel="alternate" hreflang="x-default" href="https://uebritainschool.edu.ec/contacto">
+    <link rel="alternate" hreflang="es-ec" href="https://uebritainschool.edu.ec/contacto.html">
+    <link rel="alternate" hreflang="es" href="https://uebritainschool.edu.ec/contacto.html">
+    <link rel="alternate" hreflang="x-default" href="https://uebritainschool.edu.ec/contacto.html">
 
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -102,11 +102,6 @@
           "availableLanguage": ["Spanish"],
           "areaServed": "EC"
         }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/britainschoolpcei",
-        "https://www.instagram.com/britainschoolpcei",
-        "https://wa.me/593XXXXXXXXX"
       ]
     }
     </script>
@@ -117,7 +112,7 @@
       "@type": "WebPage",
       "name": "Contacto - Britain School PCEI",
       "description": "Página de contacto de Britain School PCEI Ecuador con información de teléfono, email, dirección y horarios",
-      "url": "https://uebritainschool.edu.ec/contacto",
+      "url": "https://uebritainschool.edu.ec/contacto.html",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -131,7 +126,7 @@
             "@type": "ListItem",
             "position": 2,
             "name": "Contacto",
-            "item": "https://uebritainschool.edu.ec/contacto"
+            "item": "https://uebritainschool.edu.ec/contacto.html"
           }
         ]
       }
@@ -191,28 +186,46 @@
 
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
+            <a href="#" class="logo">
                 <img src="assets/britain-school-pcei-logo.png" alt="Britain School Logo" loading="lazy"
                     title="Britain School">
                 <span class="logo-text">BRITAIN SCHOOL</span>
-            </div>
+            </a>
 
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="/index">INICIO</a></li>
-                <li><a href="/nosotros">NOSOTROS</a></li>
-                <li><a href="/admisiones">ADMISIONES</a></li>
-                <li><a href="/modalidad">MODALIDAD DE ESTUDIO</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
-                                <li><a href="https://uebritainschool.edu.ec/moodle/" class="cta-button">Aula Virtual</a></li>
+            <ul class="nav-menu">
+                <li><a href="/index.html">INICIO</a></li>
+                <li><a href="/nosotros.html">NOSOTROS</a></li>
+                <li><a href="/admisiones.html">ADMISIONES</a></li>
+                <li><a href="/modalidad.html">MODALIDAD DE ESTUDIO</a></li>
+                <li><a href="/contacto.html" class="nav-active">CONTACTO</a></li>
+                <li><a href="https://uebritainschool.edu.ec/moodle/" class="cta-button">Aula Virtual</a></li>
             </ul>
 
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
     </nav>
+
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-header">
+            <span class="logo-text">BRITAIN SCHOOL</span>
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="/index.html" onclick="toggleMenu()">INICIO</a></li>
+            <li><a href="/nosotros.html" onclick="toggleMenu()">NOSOTROS</a></li>
+            <li><a href="/admisiones.html" onclick="toggleMenu()">ADMISIONES</a></li>
+            <li><a href="/modalidad.html" onclick="toggleMenu()">MODALIDAD DE ESTUDIO</a></li>
+            <li><a href="/contacto.html" class="nav-active" onclick="toggleMenu()">CONTACTO</a></li>
+            <li><a href="https://uebritainschool.edu.ec/moodle/" class="cta-button" onclick="toggleMenu()">Aula
+                    Virtual</a></li>
+        </ul>
+    </div>
 
     <section class="hero-contact">
         <div class="hero-overlay"></div>
@@ -403,7 +416,8 @@
                     </div>
                     <h3>Visítanos</h3>
                     <p>Ven a conocer nuestras instalaciones</p>
-                    <a href="#" class="cta-link">Ver Ubicación</a>
+                    <a href="https://www.google.com/maps?ll=-0.94572,-78.616085&z=15&t=m&hl=es-419&gl=CO&mapclient=embed&cid=8751902627673277105"
+                        class="cta-link">Ver Ubicación</a>
                 </div>
             </div>
         </div>
@@ -465,11 +479,11 @@
                     <div class="footer-column">
                         <h4>Enlaces Rápidos</h4>
                         <ul class="footer-links">
-                            <li><a href="/index">INICIO</a></li>
-                            <li><a href="/admisiones">ADMISIONES</a></li>
-                            <li><a href="/nosotros">NOSOTROS</a></li>
-                            <li><a href="/modalidad">MODALIDAD DE ESTUDIOS</a></li>
-                            <li><a href="/contacto">CONTACTOS</a></li>
+                            <li><a href="/index.html">INICIO</a></li>
+                            <li><a href="/admisiones.html">ADMISIONES</a></li>
+                            <li><a href="/nosotros.html">NOSOTROS</a></li>
+                            <li><a href="/modalidad.html">MODALIDAD DE ESTUDIOS</a></li>
+                            <li><a href="/contacto.html">CONTACTOS</a></li>
                         </ul>
                     </div>
 

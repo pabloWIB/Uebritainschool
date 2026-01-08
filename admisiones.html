@@ -33,16 +33,16 @@
     <meta name="twitter:description"
         content="Termina tu bachillerato con modalidad flexible. +7000 estudiantes graduados.">
     <meta name="twitter:image" content="https://uebritainschool.edu.ec/assets/britain-school-pcei-logo.png">
-    <link rel="canonical" href="https://uebritainschool.edu.ec/">
+    <link rel="canonical" href="https://uebritainschool.edu.ec/admisiones.html">
 
     <link rel="icon" type="image/png" sizes="32x32" href="assets/logo-britain-school-pcei-ecuador.webp">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/logo-britain-school-pcei-ecuador.webp">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/logo-britain-school-pcei-ecuador.webp">
     <link rel="manifest" href="assets/site.webmanifest">
 
-    <link rel="alternate" hreflang="es-ec" href="https://uebritainschool.edu.ec/">
-    <link rel="alternate" hreflang="es" href="https://uebritainschool.edu.ec/">
-    <link rel="alternate" hreflang="x-default" href="https://uebritainschool.edu.ec/">
+    <link rel="alternate" hreflang="es-ec" href="https://uebritainschool.edu.ec/admisiones.html">
+    <link rel="alternate" hreflang="es" href="https://uebritainschool.edu.ec/admisiones.html">
+    <link rel="alternate" hreflang="x-default" href="https://uebritainschool.edu.ec/admisiones.html">
     <title>Britain School - Formando Líderes en Emprendimiento</title>
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -63,11 +63,7 @@
         "@type": "ContactPoint",
         "contactType": "Admisiones",
         "availableLanguage": ["Spanish"]
-      },
-      "sameAs": [
-        "https://www.facebook.com/britainschoolecuador",
-        "https://www.instagram.com/britainschoolec"
-      ]
+      }
     }
     </script>
 
@@ -104,28 +100,46 @@
 
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
+            <a href="#" class="logo">
                 <img src="assets/britain-school-pcei-logo.png" alt="Britain School Logo" loading="lazy"
                     title="Britain School">
                 <span class="logo-text">BRITAIN SCHOOL</span>
-            </div>
+            </a>
 
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="/index">INICIO</a></li>
-                <li><a href="/nosotros">NOSOTROS</a></li>
-                <li><a href="/admisiones">ADMISIONES</a></li>
-                <li><a href="/modalidad">MODALIDAD DE ESTUDIO</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
-                                <li><a href="https://uebritainschool.edu.ec/moodle/" class="cta-button">Aula Virtual</a></li>
+            <ul class="nav-menu">
+                <li><a href="/index.html">INICIO</a></li>
+                <li><a href="/nosotros.html">NOSOTROS</a></li>
+                <li><a href="/admisiones.html" class="nav-active">ADMISIONES</a></li>
+                <li><a href="/modalidad.html">MODALIDAD DE ESTUDIO</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
+                <li><a href="https://uebritainschool.edu.ec/moodle/" class="cta-button">Aula Virtual</a></li>
             </ul>
 
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
     </nav>
+
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-header">
+            <span class="logo-text">BRITAIN SCHOOL</span>
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="/index.html" onclick="toggleMenu()">INICIO</a></li>
+            <li><a href="/nosotros.html" onclick="toggleMenu()">NOSOTROS</a></li>
+            <li><a href="/admisiones.html" class="nav-active" onclick="toggleMenu()">ADMISIONES</a></li>
+            <li><a href="/modalidad.html" onclick="toggleMenu()">MODALIDAD DE ESTUDIO</a></li>
+            <li><a href="/contacto.html" onclick="toggleMenu()">CONTACTO</a></li>
+            <li><a href="https://uebritainschool.edu.ec/moodle/" class="cta-button" onclick="toggleMenu()">Aula
+                    Virtual</a></li>
+        </ul>
+    </div>
 
     <section class="hero-admissions">
         <div class="hero-overlay"></div>
@@ -263,7 +277,7 @@
                         </div>
                     </div>
 
-                    <a href="/contacto" class="btn-primary">Solicitar Información</a>
+                    <a href="/contacto.html" class="btn-primary">Solicitar Información</a>
                 </div>
 
                 <div class="requirements-image">
@@ -282,8 +296,8 @@
                 <h2>¿Listo para comenzar?</h2>
                 <p>Da el primer paso hacia tu futuro educativo</p>
                 <div class="cta-buttons">
-                    <a href="/contacto" class="btn-primary-large">Iniciar Proceso de Admisión</a>
-                    <a href="/modalidad" class="btn-outline">Conocer Modalidades</a>
+                    <a href="/contacto.html" class="btn-primary-large">Iniciar Proceso de Admisión</a>
+                    <a href="/modalidad.html" class="btn-outline">Conocer Modalidades</a>
                 </div>
             </div>
         </div>
@@ -392,11 +406,11 @@
                     <div class="footer-column">
                         <h4>Enlaces Rápidos</h4>
                         <ul class="footer-links">
-                            <li><a href="/index">INICIO</a></li>
-                            <li><a href="/admisiones">ADMISIONES</a></li>
-                            <li><a href="/nosotros">NOSOTROS</a></li>
-                            <li><a href="/modalidad">MODALIDAD DE ESTUDIOS</a></li>
-                            <li><a href="/contacto">CONTACTOS</a></li>
+                            <li><a href="/index.html">INICIO</a></li>
+                            <li><a href="/admisiones.html">ADMISIONES</a></li>
+                            <li><a href="/nosotros.html">NOSOTROS</a></li>
+                            <li><a href="/modalidad.html">MODALIDAD DE ESTUDIOS</a></li>
+                            <li><a href="/contacto.html">CONTACTOS</a></li>
                         </ul>
                     </div>
 

@@ -19,7 +19,7 @@
     <link rel="icon" href="assets/britain-school-pcei-logo.png" type="image/png">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://uebritainschool.edu.ec/nosotros">
+    <meta property="og:url" content="https://uebritainschool.edu.ec/nosotros.html">
     <meta property="og:title" content="Nosotros - Britain School PCEI Ecuador | 25+ Años de Experiencia">
     <meta property="og:description"
         content="Descubre Britain School: 25+ años formando líderes emprendedores, +7000 graduados. Educación de calidad, equidad y pertinencia en Ecuador.">
@@ -31,23 +31,23 @@
     <meta property="og:site_name" content="Britain School PCEI Ecuador">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://uebritainschool.edu.ec/nosotros">
+    <meta name="twitter:url" content="https://uebritainschool.edu.ec/nosotros.html">
     <meta name="twitter:title" content="Nosotros - Britain School PCEI Ecuador | 25+ Años de Experiencia">
     <meta name="twitter:description"
         content="Descubre Britain School: 25+ años formando líderes emprendedores, +7000 graduados.">
     <meta name="twitter:image"
         content="https://uebritainschool.edu.ec/assets/charla-educativa-britain-school-patio.webp">
 
-    <link rel="canonical" href="https://uebritainschool.edu.ec/nosotros">
+    <link rel="canonical" href="https://uebritainschool.edu.ec/nosotros.html">
 
     <link rel="icon" type="image/png" sizes="32x32" href="assets/logo-britain-school-pcei-ecuador.webp">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/logo-britain-school-pcei-ecuador.webp">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/logo-britain-school-pcei-ecuador.webp">
     <link rel="manifest" href="assets/site.webmanifest">
 
-    <link rel="alternate" hreflang="es-ec" href="https://uebritainschool.edu.ec/nosotros">
-    <link rel="alternate" hreflang="es" href="https://uebritainschool.edu.ec/nosotros">
-    <link rel="alternate" hreflang="x-default" href="https://uebritainschool.edu.ec/nosotros">
+    <link rel="alternate" hreflang="es-ec" href="https://uebritainschool.edu.ec/nosotros.html">
+    <link rel="alternate" hreflang="es" href="https://uebritainschool.edu.ec/nosotros.html">
+    <link rel="alternate" hreflang="x-default" href="https://uebritainschool.edu.ec/nosotros.html">
 
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -58,7 +58,7 @@
       "@type": "AboutPage",
       "name": "Nosotros - Britain School PCEI",
       "description": "Información sobre Britain School PCEI Ecuador, nuestra historia, misión y valores",
-      "url": "https://uebritainschool.edu.ec/nosotros",
+      "url": "https://uebritainschool.edu.ec/nosotros.html",
       "mainEntity": {
         "@type": "EducationalOrganization",
         "name": "U.E. PCEI Britain School",
@@ -95,11 +95,7 @@
             "opens": "08:00",
             "closes": "17:00"
           }
-        },
-        "sameAs": [
-          "https://www.facebook.com/britainschoolecuador",
-          "https://www.instagram.com/britainschoolec"
-        ]
+        }
       }
     }
     </script>
@@ -119,7 +115,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Nosotros",
-          "item": "https://uebritainschool.edu.ec/nosotros"
+          "item": "https://uebritainschool.edu.ec/nosotros.html"
         }
       ]
     }
@@ -137,28 +133,46 @@
 
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
+            <a href="#" class="logo">
                 <img src="assets/britain-school-pcei-logo.png" alt="Britain School Logo" loading="lazy"
                     title="Britain School">
                 <span class="logo-text">BRITAIN SCHOOL</span>
-            </div>
+            </a>
 
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="/index">INICIO</a></li>
-                <li><a href="/nosotros">NOSOTROS</a></li>
-                <li><a href="/admisiones">ADMISIONES</a></li>
-                <li><a href="/modalidad">MODALIDAD DE ESTUDIO</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
-                                <li><a href="https://uebritainschool.edu.ec/moodle/" class="cta-button">Aula Virtual</a></li>
+            <ul class="nav-menu">
+                <li><a href="/index.html">INICIO</a></li>
+                <li><a href="/nosotros.html" class="nav-active">NOSOTROS</a></li>
+                <li><a href="/admisiones.html">ADMISIONES</a></li>
+                <li><a href="/modalidad.html">MODALIDAD DE ESTUDIO</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
+                <li><a href="https://uebritainschool.edu.ec/moodle/" class="cta-button">Aula Virtual</a></li>
             </ul>
 
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
     </nav>
+
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-header">
+            <span class="logo-text">BRITAIN SCHOOL</span>
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="/index.html" onclick="toggleMenu()">INICIO</a></li>
+            <li><a href="/nosotros.html" class="nav-active" onclick="toggleMenu()">NOSOTROS</a></li>
+            <li><a href="/admisiones.html" onclick="toggleMenu()">ADMISIONES</a></li>
+            <li><a href="/modalidad.html" onclick="toggleMenu()">MODALIDAD DE ESTUDIO</a></li>
+            <li><a href="/contacto.html" onclick="toggleMenu()">CONTACTO</a></li>
+            <li><a href="https://uebritainschool.edu.ec/moodle/" onclick="toggleMenu()">Aula
+                    Virtual</a></li>
+        </ul>
+    </div>
 
     <section class="hero-about">
         <div class="hero-overlay"></div>
@@ -363,8 +377,8 @@
                 <h2>¿Listo para ser parte de nuestra comunidad?</h2>
                 <p>Únete a los más de 7,000 estudiantes que han confiado en Britain School</p>
                 <div class="cta-buttons">
-                    <a href="/admisiones" class="btn-primary-large">Iniciar Admisión</a>
-                    <a href="/contacto" class="btn-outline">Contáctanos</a>
+                    <a href="/admisiones.html" class="btn-primary-large">Iniciar Admisión</a>
+                    <a href="/contacto.html" class="btn-outline">Contáctanos</a>
                 </div>
             </div>
         </div>
@@ -443,11 +457,11 @@
                     <div class="footer-column">
                         <h4>Enlaces Rápidos</h4>
                         <ul class="footer-links">
-                            <li><a href="/index">INICIO</a></li>
-                            <li><a href="/admisiones">ADMISIONES</a></li>
-                            <li><a href="/nosotros">NOSOTROS</a></li>
-                            <li><a href="/modalidad">MODALIDAD DE ESTUDIOS</a></li>
-                            <li><a href="/contacto">CONTACTOS</a></li>
+                            <li><a href="/index.html">INICIO</a></li>
+                            <li><a href="/admisiones.html">ADMISIONES</a></li>
+                            <li><a href="/nosotros.html">NOSOTROS</a></li>
+                            <li><a href="/modalidad.html">MODALIDAD DE ESTUDIOS</a></li>
+                            <li><a href="/contacto.html">CONTACTOS</a></li>
                         </ul>
                     </div>
 
