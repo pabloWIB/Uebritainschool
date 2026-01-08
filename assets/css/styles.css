@@ -130,10 +130,20 @@ h5 {
   font-size: 0.95rem;
 }
 
-.cta-button:hover {
+.nav-menu .cta-button:hover {
+  width: 0;
   background: #a01319;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(196, 22, 28, 0.3);
+  color: white !important;
+}
+
+.nav-menu .cta-button:hover::after {
+  width: 0;
+  background: #a01319;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(196, 22, 28, 0.3);
+  color: white !important;
 }
 
 .hamburger {
